@@ -1,0 +1,9 @@
+<!-- components/file-picker.hbs -->
+<button class="file-picker-button" {{on "click" this.openFilePicker}}>
+  {{this.buttonText}}
+</button>
+<input type="file" id={{this.inputId}} class="file-input" onchange={{this.handleFileChange}} />
+
+{{#if this.errorMessage}}
+  <p>{{this.errorMessage}}</p>
+{{/if}}
